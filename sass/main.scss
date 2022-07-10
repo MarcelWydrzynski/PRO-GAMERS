@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 
 * {
 	margin: 0 auto;
@@ -8,18 +9,21 @@
 body {
 	font-family: "Press Start 2P", cursive;
 	position: relative;
-	background-color: $bg-color;
+	margin: 0;
+	display: inline-block;
 }
 
 .navigation {
 	width: 100vw;
 	height: 10vh;
-	border: 3px solid red;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	letter-spacing: 0.2em;
-   
+	background-color: $light-gray;
+	position: sticky;
+	top: 0;
+	z-index: 5;
 
 	&__heading-logo {
 		display: flex;
@@ -32,14 +36,16 @@ body {
 		display: flex;
 		list-style: none;
 		text-decoration: none;
-		color: grey;
+		
 	}
 
 	&__item {
-		margin-right: 7em;
+		margin-right: 4em;
 		list-style: none;
+		font-size: 0.8em;
 		text-decoration: none;
-		color: grey;
+		color: black;
+		transition: color 0.7s ease-in-out;
 
 		&:hover {
 			color: $main-color;
@@ -48,16 +54,208 @@ body {
 }
 
 .hero {
-   width: 100vw;
-   height: 90vh;
-   overflow: hidden;
+	width: 100vw;
+	height: 90vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color: #000000, $alpha: 0.5);
 
-   &__hero-img {
-      background-image: url(/img/header-big.jpg);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -1;
-   }
+	&__hero-img {
+		background-image: url(/img/header-big.jpg);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		top: 0;
+		z-index: -1;
+	}
+
+	&__hero-welcome {
+		height: 15vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__hero-welcome-text {
+		display: flex;
+		flex-direction: column;
+		color: white;
+	}
+
+	&__hero-welcome-heading {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+	&__hero-welcome-heading span {
+		color: $main-color;
+	}
+
+	&__hero-welcome-p {
+		font-size: 0.9rem;
+	}
+
+	&__hero-welcome-btn {
+		color: white;
+		background: none;
+		font-family: "Press Start 2P", cursive;
+		border-radius: 25px;
+		padding: 15px;
+		margin-top: 20px;
+		transition: 0.7s background-color;
+
+		&:hover {
+			background-color: $main-color;
+			cursor: pointer;
+		}
+	}
+}
+
+.about-us {
+	width: 100vw;
+	height: 25vh;
+	background-color: $light-gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+
+	&__about-us-heading {
+		margin: -10px 0 30px 0;
+		padding-bottom: 10px;
+		position: relative;
+
+		&::after {
+			@include green-bar;
+			content: "";
+			width: 100px;
+			height: 5px;
+			top: 100%;
+		}
+	}
+
+	&__about-us-info-boxes {
+		width: 1500px;
+		height: 14.5vh;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	&__about-us-info-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 500px;
+		height: 100px;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+
+	&__about-us-info-box-heading {
+		font-size: 1em;
+		margin-bottom: 25px;
+	}
+
+	&__about-us-info-box-description {
+		font-size: 0.7em;
+		text-align: center;
+	}
+}
+
+.creating {
+	width: 100vw;
+	height: 25vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(/img/about-her-big.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+
+	&__creating-heading {
+		font-size: 1.5rem;
+		margin-bottom: 80px;
+		position: relative;
+
+		&::after {
+			content: "";
+			@include green-bar;
+			width: 400px;
+		}
+	}
+
+	&__creating-info-boxes {
+		display: flex;
+		flex-direction: row;
+		width: 1200px;
+	}
+
+	&__creating-info-box {
+		width: 300px;
+	}
+
+	&__creating-info-box-heading {
+		font-size: 1.3em;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	&__creating-info-box-description {
+		font-size: 1em;
+		text-align: center;
+		padding-top: 10px;
+		line-height: 20px;
+	}
+}
+
+.showcase {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $light-gray;
+	height: 60vh;
+	width: 100vw;
+
+	&__showcase-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__showcase-heading {
+		position: relative;
+		font-size: 1.2rem;
+		
+		&::after {
+			content: "";
+			@include green-bar;
+			width: 100px;
+		}
+	}
+
+	&__showcase-carousel-conatiner {
+		border: 3px solid red;
+		width: 1400px;
+		height: 600px;
+		margin-top: 60px;
+	}
+ 
+	  
+	  
 }
