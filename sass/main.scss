@@ -1,0 +1,63 @@
+@import "colors";
+
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+body {
+	font-family: "Press Start 2P", cursive;
+	position: relative;
+	background-color: $bg-color;
+}
+
+.navigation {
+	width: 100vw;
+	height: 10vh;
+	border: 3px solid red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	letter-spacing: 0.2em;
+   
+
+	&__heading-logo {
+		display: flex;
+	}
+	&__heading-span {
+		color: $main-color;
+	}
+
+	&__items {
+		display: flex;
+		list-style: none;
+		text-decoration: none;
+		color: grey;
+	}
+
+	&__item {
+		margin-right: 7em;
+		list-style: none;
+		text-decoration: none;
+		color: grey;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+}
+
+.hero {
+   width: 100vw;
+   height: 90vh;
+   overflow: hidden;
+
+   &__hero-img {
+      background-image: url(/img/header-big.jpg);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+   }
+}

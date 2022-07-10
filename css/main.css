@@ -1,0 +1,72 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  position: relative;
+  background-color: #ebecf2;
+}
+
+.navigation {
+  width: 100vw;
+  height: 10vh;
+  border: 3px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.2em;
+}
+
+.navigation__heading-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation__heading-span {
+  color: #008c15;
+}
+
+.navigation__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: grey;
+}
+
+.navigation__item {
+  margin-right: 7em;
+  list-style: none;
+  text-decoration: none;
+  color: grey;
+}
+
+.navigation__item:hover {
+  color: #008c15;
+}
+
+.hero {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero__hero-img {
+  background-image: url(/img/header-big.jpg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+/*# sourceMappingURL=main.css.map */

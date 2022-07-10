@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/componets.scss"
+    ],
+    "names": [],
+    "file": "componets.css"
+}
