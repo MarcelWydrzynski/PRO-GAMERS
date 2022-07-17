@@ -14,7 +14,8 @@
 			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="/css/main.css" />
+		
+		<link rel="stylesheet" href="/sass/main.css"/>
 		<title>PROGAMERS</title>
 	</head>
 	<body>
@@ -169,21 +170,56 @@
         <div class="achievements">
             <p class = "achievements__title">Osiagniecia</p>
                 <div class="achievements__slideshow">
-                    <div class="achievements__slideshow-item"><p>nagrody</p>
-                            <span>34,000</span></div>
-                    <div class="achievements__slideshow-item"><p>nagrody</p>
-                            <span>34,000</span></div>
-                    <div class="achievements__slideshow-item"><p>nagrody</p>
-                            <span>34,000</span></div>
-                     <div class="achievements__slideshow-item"><p>nagrody</p>
-                            <span>34,000</span></div>
-                     <div class="achievements__slideshow-item"><p>nagrody</p>
-                             <span>34,000</span></div>
+                    <div class="achievements__slideshow-item"><p>ZADOWOLONYCH KLIENTOW:</p>
+                            <span>100%</span></div>
+                    <div class="achievements__slideshow-item"><p>ZDOBYTYCH NAGROD:</p>
+                            <span>21</span></div>
+                    <div class="achievements__slideshow-item"><p>PRACOWNIKOW:</p>
+                            <span>1,100</span></div>
+                     <div class="achievements__slideshow-item"><p>NOWOCZESNYCH BIUR:</p>
+                            <span>15</span></div>
+                     <div class="achievements__slideshow-item"><p>GRACZY:</p>
+                             <span>34,200,000</span></div>
                     </div>
                 </div>
             </div>
         </div>
 
-		<script src="/js/main.js"></script>
+		<div class="team">
+			<div class="team__container">
+			<h2 class="team__title">Drużyna</h2>
+
+			<div class="slideshow_container">
+				<div class="slider">
+				  <div class="slider__slides">
+					<div class="slider__slide active">
+					   <img src="img/team/women-1209678_1920.jpg" alt="A rooftop in Japan"/>
+					   <div class="team__slide-text"><h2 class="team__text-heading">Marek</h2>
+						<p class="team_text-description">to jest marek, marek bardzo lubi grać w gry</p>
+					</div>
+					</div>
+					<div class="slider__slide">
+					  <img src="img/team/entrepreneur-2326419_1920.jpg" alt="A castle in Scotland" />
+					  
+					</div>
+					<div class="slider__slide">
+					  <img src="img/team/building-2762241_1920.jpg" alt="A street market in China" />
+					</div>
+					<div class="slider__slide">
+					  <img src="img/team/adult-2449725_1920.jpg" alt="A statue of the Buddha in Thailand" />
+					</div>
+				  </div>
+				  <div id="nav-button--prev" class="slider__nav-button"></div>
+				  <div id="nav-button--next" class="slider__nav-button"></div>
+				  <div class="slider__nav">
+					<div class="slider__navlink active"></div>
+					<div class="slider__navlink"></div>
+					<div class="slider__navlink"></div>
+					<div class="slider__navlink"></div>
+				  </div>
+				</div>
+			  </div>
+
+			  <script src="/js/main.js"></script>
 	</body>
 </html>
